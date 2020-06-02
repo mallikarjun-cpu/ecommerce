@@ -1,0 +1,79 @@
+
+
+{% extends 'header.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{{ super() }}
+ 
+
+
+<br>
+<body style="background-color: #a9a9a9">
+ 
+
+<div class="navbar">
+	 
+	<form method="POST" action="/logout">
+						<input type="submit"  style="font-size: 20px;margin-left: 1200px" value="LOG OUT">
+
+	</form>
+</div>
+ <br>
+<form>
+  <input style="margin-left: 1200px;font-size: 20px" type="button" value="HOMEpage!" onclick="history.back()">
+</form>
+
+
+
+<br>
+<div class="navbar">
+	 
+	<form method="POST" action="/gocart">
+						<input type="submit"  style="font-size: 20px;margin-left: 1200px" value="CART">
+
+	</form>
+</div>
+<br>
+<p style="font-size:60px;text-align: center;">ELECTRONICS</p>
+
+<p style="font-size:50px;margin-left: 90px;">Choose our product...
+you are ID no {{ acc_no }}.</p>
+<br>
+
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+
+
+{% for i in results %}
+{% if i.id >= 5: %}
+
+
+<h3 style="margin-left: 230px;">{{ i.id }},</h3><img src="static/{{ i.img_key }}" width="400" height="240" style="margin-left: 250px ">
+<h2 style="margin-left: 250px;">{{ i.name }} , {{ i.cost }}/-, </h2>
+
+
+<a href="{{ url_for('cart', id=i.id, acc_no=acc_no ) }}" style="color:green;font-size: 25px">
+	<button style="background-color: green;margin-left: 400px;font-size: 20px">BUY NOW!!	</button>
+</a>
+<br>
+
+
+
+{% endif %}
+{% endfor %}
+<br>
+
+<br>
+{{ acc_no }}
+<br>
+{% include "footer.html" %}
+
+{% endblock %}

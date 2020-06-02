@@ -1,0 +1,78 @@
+
+
+{% extends 'header.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{{ super() }}
+ 
+
+
+<br>
+<body style="background-color: pink">
+ 
+
+<div class="navbar">
+	 
+	<form method="POST" action="/logout">
+						<input type="submit"  style="font-size: 20px;margin-left: 1200px" value="LOG OUT">
+
+	</form>
+</div>
+ <br>
+<form>
+  <input style="margin-left: 1200px;font-size: 20px" type="button" value="Go BACK!" onclick="history.back()">
+</form>
+
+<br>
+
+
+
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+
+
+
+</body>
+<h1 style="text-align: center;color: brown">THIS IS YOUR CART..
+ ur id is ..{{ acc_no }}
+<br>
+........................YOUR TOTAL amount is =  Rs. {{ total }}
+</h1>
+
+
+{% for r in games_cart %}
+
+
+<h3 style="margin-left: 230px;">{{ r.id }}</h3><img src="{{ url_for( 'static' , filename=r.img_key ) }}" width="400" height="240" style="margin-left: 250px ">
+<h2 style="margin-left: 250px;">{{ r.name }} , {{ r.cost }}/- </h2>
+
+<br>
+
+
+{% endfor %}
+
+
+<br>
+
+<br>
+
+
+<h1 style="text-align: center;color: brown">
+<br>
+.............................YOUR TOTAL amount is =  Rs. {{ total }}
+</h1>
+
+<form>
+  <input style="margin-left: 1200px;font-size: 20px" type="button" value="Go BACK!" onclick="history.back()">
+</form>
+
+
+{% include "footer.html" %}
+{% endblock %}

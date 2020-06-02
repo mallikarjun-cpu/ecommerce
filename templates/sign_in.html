@@ -1,0 +1,53 @@
+{% extends 'header.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{{ super() }}
+ 
+
+
+
+<!DOCTYPE html>
+<html>
+<body style="background-color: yellow;text-align: center;font-size: 25px">
+
+
+
+(this is the sign in page)
+<br>
+ 
+<h1 style="font-size: 40px;">LOGIN PAGE.</h1>
+
+<p style="font-size: 40px;">Please fill out the details.</p>
+<form method="POST" action="/processed">
+					  <p>username:</p>	
+                      <input type="text" name="name">
+                      <p>password:</p>
+                      <input  type="password"  name="location" id="myInput"><br>
+                      <input type="checkbox" onclick="myFunction()">Show Password
+                      <script>
+							function myFunction() {
+							  var x = document.getElementById("myInput");
+							  if (x.type === "password") {
+							    x.type = "text";
+							  } else {
+							    x.type = "password";
+							  }
+							}
+							</script>
+
+                      <br>
+                      <input type="submit" value="Submit">
+</form>
+
+
+
+
+
+<body>
+<html>
+
+{% include "footer.html" %}
+
+{% endblock %}

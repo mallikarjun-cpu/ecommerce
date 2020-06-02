@@ -1,0 +1,45 @@
+
+{% extends 'header.html' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block content %}
+{{ super() }}
+ 
+
+
+<body style="background-color: violet">
+<div class="navbar">
+	 
+	<form method="POST" action="/">
+						<input type="submit"  style="font-size: 20px;margin-left: 1200px" value="Homepage">
+
+	</form>
+</div>
+
+ <p style="color: blue;font-size: 25px"> THIS PAGE IS TO ADD ITEMS TO A DATABASE....!</p>
+<br>
+<br>
+
+<h1 style="color: brown">Enter the items for SALE...:</h1>
+<form style="margin-left: 50px" method="POST" action="/itemadd">
+	<h1> Enter the item name:</h1>
+                      <input type="text" name="name"><br>
+                      <h1>Enter the cost per pcs:</h1>
+                      <br>
+                      <input type="text" name="cost">
+                      <h1>Enter the image name:</h1>
+                      <br>
+                      <input type="text" name="img_key">
+                      
+                      <br>
+                      <br>
+                      <input type="submit" style="font-size: 15px;margin-left: 50px" value="ADD THE ITEM!!">
+</form>
+
+
+
+</body>
+{% include "footer.html" %}
+
+{% endblock %}
