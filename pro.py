@@ -132,15 +132,17 @@ def cart():
     games_cart = []
 
     for row in acc_game:
-        print(row[0])
-        abc = row[0]
-        print('abc=',type(abc),'acc_no=',type(acc_no))
-        if abc == int(acc_no):
+
+       # abc = row[0]
+        #print('abc=',type(abc),'acc_no=',type(acc_no))
+        if row[0] == int(acc_no):
             print('this is satisfied')
             for game in games:
-                if game[0] == row[1]:
+                if game[0] == row[1] :
+                    print('this is also satisfied')
                     games_cart.append(game)
                     print(games_cart)
+
 
     total = 0
     for g in games_cart:
@@ -157,6 +159,15 @@ def cart():
 def gocart():
 
 	return render_template('cart.html')
+
+
+
+@app.route('/delete', methods=[ 'POST','GET'])
+def item_delete():
+    acc_no = request.args.get('acc_no')
+    print('account id is',acc_no)
+
+    return ('deleting an item , acc id is ')
 
 
 
@@ -188,7 +199,7 @@ def add_item():
 	return render_template('add_item.html')
 
 def connect_db():
-    sql = sqlite3.connect('sqlite3/usercr.db')
+    sql = sqlite3.connect('/home/arjun1995/ecommerce/ecommerce/sqlite3/usercr.db')
     sql.row_factory = sqlite3.Row
     return sql
 
