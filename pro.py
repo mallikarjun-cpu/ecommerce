@@ -201,13 +201,12 @@ def add_item_admin():
 		if name == 'aksir':
 			return render_template('add_items.html')
 
-
 	return render_template('admin_sign_in.html', xyz=xyz)
 
 
 def connect_db():
-    #sql = sqlite3.connect('/home/arjun1995/ecommerce/ecommerce/sqlite3/usercr.db')
-    sql = sqlite3.connect('sqlite3/usercr.db')
+    sql = sqlite3.connect('/home/arjun1995/ecommerce/ecommerce/sqlite3/usercr.db')
+    #sql = sqlite3.connect('sqlite3/usercr.db')
     sql.row_factory = sqlite3.Row
     return sql
 
