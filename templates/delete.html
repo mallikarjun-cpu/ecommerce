@@ -14,11 +14,11 @@
  
 
 <div class="navbar">
-	 
-	<form method="POST" action="/logout">
-						<input type="submit"  style="color: black;font-size: 20px;margin-left: 1200px" value="LOG OUT">
+   
+  <form method="POST" action="/logout">
+            <input type="submit"  style="color: black;font-size: 20px;margin-left: 1200px" value="LOG OUT">
 
-	</form>
+  </form>
 </div>
  <br>
 <br>
@@ -44,25 +44,16 @@ img {
 
 
 </body>
-<h1 style="text-align: center;color: brown">THIS IS YOUR CART..
-<!-- ur id is ..{{ acc_no }}-->
+<h1 style="text-align: center;color: brown">ITEM SUCCESSFULLY DELETED , THIS IS YOUR NEW CART..
+
  <br>
- {% if abc==1.5 and de!=1: %}
-  <br>
- {% if total !=0: %}
-  
-<br>
- ITEM ALREADY ADDED TO CART!
-<br>
-{% endif %}
-{% endif %}
-
-
  {% if total==0: %}
   
  CART IS EMPTY !!!!!!!!......................
 <br>
 {% endif %}
+<br>
+<br>
 <br>
 ........................YOUR TOTAL amount is =  Rs. {{ total }}
 </h1>
@@ -92,7 +83,6 @@ img {
 <br>
 .............................YOUR TOTAL amount is =  Rs. {{ total }}
 </h1>
-
 
 
 

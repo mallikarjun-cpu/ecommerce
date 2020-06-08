@@ -10,37 +10,40 @@
 <html>
 <body style="background-color: lightblue">
 
+<div style="margin-left: 200px">
 
 <br>
-<p style="font-size: 30px;"> Welcome shoppers!!!!...</p>
-(this is the first page)
-
+<p style="margin-left: 180px; font-size: 40px;"> Welcome shoppers!!!!...</p>
 <br>
 <br>
-<div class="navbar">
-	 
-	<form method="POST" action="/sign_in">
-						<input type="submit"  style="font-size: 30px;margin-left: 150px" value="sign_in">
-
-	</form>
-</div>
-
-
-<br>
-<br>
-
+<p style="font-size: 30px;">  Please sign Up, if you are new to the page..</p>
 <div class="navbar">
 	
 	<form method="POST" action="/sign_up">
-						<input style="font-size: 30px;margin-left: 150px" type="submit" value="sign_up">
+						<input style="font-size: 30px;margin-left: 150px;color: black" type="submit" value="sign_up">
+
+	</form>
+</div>
+<br>
+<br>
+<p style="font-size: 30px;">Sign In, if you have already signed up!!!!....</p>
+<div class="navbar">
+	 
+	<form method="POST" action="/sign_in">
+						<input type="submit"  style="font-size: 30px;margin-left: 150px;color: black" value="sign_in">
 
 	</form>
 </div>
 
 
+<br>
+</div>
+</body>
+</html>
 
-<body>
-<html>
+<br>
+<br>
+<br>
 
 {% include "footer.html" %}
 

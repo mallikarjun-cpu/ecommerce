@@ -13,31 +13,21 @@
 
 <br>
 <body style="background-color: lightblue">
-THIS IS ESSENTIALS A PAGE !!!
+<a name="top"></a>
 <br>
  
 <div class="navbar">
 	 
 	<form method="POST" action="/logout">
-						<input type="submit"  style="font-size: 20px;margin-left: 1200px" value="LOG OUT">
+						<input type="submit"  style="color: black;font-size: 20px;margin-left: 1200px" value="LOG OUT">
 
 	</form>
 </div>
-<br>
 
 
 <br>
-<div class="navbar">
-	 
-	<form method="POST" action="/cart">
-						<input type="submit"  style="font-size: 20px;margin-left: 1200px" value="CART">
-
-	</form>
-</div>
-<br>
-<br>
-<a href="{{ url_for('cart', id=0, acc_no=0 ) }}" style="color:green;font-size: 25px">
-	<button style="background-color: green;margin-left: 400px;font-size: 20px">CART !	</button>
+<a href="{{ url_for('cart', id=-1, acc_no=acc_no ) }}" style="color:green;font-size: 25px">
+	<button style="background-color: green;margin-left: 1200px;font-size: 20px">CART !	</button>
 </a>
 <br>
 
@@ -45,8 +35,6 @@ THIS IS ESSENTIALS A PAGE !!!
 <p style="font-size:60px;text-align: center;">HOME ESSENTIALS</p>
 
 <p style="font-size:50px;margin-left: 90px;">Choose our products....
-you are ID no {{ acc_no }}</p>
-
 
 
 <style>
@@ -77,10 +65,17 @@ img {
 <br>
 
 <br>
-{{ acc_no }}
-<br>
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<a href="{{ url_for('elec', acc_no=acc_no ) }}" class="btn btn-success btn-sm pull-right" style="color:green;font-size: 25px">
+	<button style="background-color: gold;margin-left: 1000px;font-size: 20px;color: black">ELECTRONICS	</button>
+</a>
+<br>
+
 
 {% include "footer.html" %}
 

@@ -18,10 +18,15 @@
 <div class="navbar">
 	 
 	<form method="POST" action="/logout">
-						<input type="submit"  style="font-size: 20px;margin-left: 1200px" value="LOG OUT">
+						<input type="submit"  style="color: black; font-size: 20px;margin-left: 1200px" value="LOG OUT">
 
 	</form>
 </div>
+<br>
+<a href="{{ url_for('cart', id=0, acc_no=acc_no ) }}" style="color:green;font-size: 25px">
+	<button style="background-color: green;margin-left: 1200px;font-size: 20px">CART !	</button>
+</a>
+<br>
 
 <h1 style="text-align: center;">
 
@@ -31,10 +36,11 @@
 
 <br>
 Hello {{ name }}, you are on the home page, you are ID no {{ acc_no }}
+<br>
+{{ r }}</h1>
 
-
-</h1>
-
+<br>
+<p style="font-size:60px;margin-left: 190px;">Choose our products....</p>
 <br>
 <a href="{{ url_for('elec', acc_no=acc_no ) }}" class="btn btn-success btn-sm pull-right" style="color:green;font-size: 25px">
 	<button style="background-color: gold;margin-left: 400px;font-size: 20px;color: black">ELECTRONICS	</button>
@@ -52,11 +58,11 @@ Hello {{ name }}, you are on the home page, you are ID no {{ acc_no }}
 
 <br>
 <br>
-<p style="font-size:60px;margin-left: 190px;">Choose our products....</p>
+<p style="font-size:60px;margin-left: 190px;">If ur in a hurry, then ....</p>
 
 <img src="static/imge.jpg" width="200" height="240" style="margin-left: 400px" >
 <pre style="font-size: 30px;margin-left: 400px;font-style: bold;">Beer rs.195</pre>
-<a href="{{ url_for('non_elec', acc_no=acc_no ) }}" class="btn btn-success btn-sm pull-right" style="color:green;font-size: 25px">
+<a href="{{ url_for('cart', id=4, acc_no=acc_no ) }}" class="btn btn-success btn-sm pull-right" style="color:green;font-size: 25px">
 	<button style="background-color: green;margin-left: 420px;font-size: 20px">BUY NOW!!	</button>
 </a>
 

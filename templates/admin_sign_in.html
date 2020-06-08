@@ -12,25 +12,19 @@
 <html>
 <body style="background-color: yellow;text-align: center;font-size: 25px">
 
-<p style="font-size: 45px">
-{% if ter ==1.95: %}
 
-"YOU HAVE NOT ENTERED SUFFICIENT DETAILS"
-
-{% endif %}
-{% if ter ==0: %}
-
-YOU HAVE ENTERED WRONG DETAILS
-
-{% endif %}
-</p>
-
-
+<br>
  
-<h1 style="font-size: 40px;">LOGIN PAGE.</h1>
+
+{% if xyz ==0: %}
+<p style=" text-decoration-color: red;font-size: 45px">
+YOU HAVE ENTERED WRONG DETAILS
+</p>
+{% endif %}
+<h1 style="font-size: 40px;">ADMIN PLEASE LOGIN .</h1>
 
 <p style="font-size: 40px;">Please fill out the details.</p>
-<form method="POST" action="/processed">
+<form method="POST" action="/add_item_admin">
 					  <p>username:</p>	
                       <input type="text" name="name">
                       <p>password:</p>
